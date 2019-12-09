@@ -824,11 +824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
+      "projectUniqueName": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
       "projectName": "MonitorProcesos.Negocio",
-      "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
+      "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
       "packagesPath": "C:\\Users\\Manuel.Leon\\.nuget\\packages\\",
-      "outputPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Negocio\\obj\\",
+      "outputPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -847,11 +847,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj": {
-              "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj"
+            "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj": {
+              "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj"
             },
-            "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj": {
-              "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj"
+            "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj": {
+              "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj"
             }
           }
         }

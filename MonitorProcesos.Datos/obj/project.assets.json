@@ -805,11 +805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj",
+      "projectUniqueName": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj",
       "projectName": "MonitorProcesos.Datos",
-      "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj",
+      "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj",
       "packagesPath": "C:\\Users\\Manuel.Leon\\.nuget\\packages\\",
-      "outputPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Datos\\obj\\",
+      "outputPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Datos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -828,8 +828,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj": {
-              "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj"
+            "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj": {
+              "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj"
             }
           }
         }

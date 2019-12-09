@@ -16,7 +16,7 @@ namespace MonitorProcesos.Utils
                 string Key = prop.Name.ToString();
                 dynamic Value = obj.GetType().GetProperty(Key).GetValue(obj, null);
 
-                P.Add(Key, Value);
+                P.Add(Key, Value); 
             }
 
             return P;

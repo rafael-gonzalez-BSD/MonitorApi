@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
+      "projectUniqueName": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
       "projectName": "MonitorProcesos.Entidad",
-      "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
+      "projectPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
       "packagesPath": "C:\\Users\\Manuel.Leon\\.nuget\\packages\\",
-      "outputPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorProcesos\\MonitorProcesos.Entidad\\obj\\",
+      "outputPath": "C:\\Portafolio Proyectos\\NOVA\\Monitor de Procesos\\Codigo\\MonitorApi\\MonitorProcesos.Entidad\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
