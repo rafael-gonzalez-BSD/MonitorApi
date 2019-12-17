@@ -16,3 +16,21 @@ C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorP
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.csproj.CopyComplete
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.dll
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.pdb
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Negocio.deps.json
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Negocio.dll
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Negocio.pdb
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Datos.dll
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Entidad.dll
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Datos.pdb
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\MonitorProcesos.Entidad.pdb
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\MonitorApi\MonitorProcesos.Negocio\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.csprojAssemblyReference.cache
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.csproj.CoreCompileInputs.cache
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.AssemblyInfoInputs.cache
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.AssemblyInfo.cs
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.csproj.CopyComplete
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.dll
+C:\MonitorApi\MonitorProcesos.Negocio\obj\Debug\netcoreapp2.1\MonitorProcesos.Negocio.pdb
