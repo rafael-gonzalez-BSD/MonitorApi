@@ -14,3 +14,19 @@ C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorP
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.csproj.CopyComplete
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.dll
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.pdb
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\MonitorProcesos.Datos.deps.json
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\MonitorProcesos.Datos.dll
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\MonitorProcesos.Datos.pdb
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\MonitorProcesos.Entidad.dll
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\System.Data.SqlClient.dll
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\MonitorProcesos.Entidad.pdb
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\MonitorApi\MonitorProcesos.Datos\bin\Release\netcoreapp2.1\System.Data.SqlClient.xml
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.csprojAssemblyReference.cache
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.csproj.CoreCompileInputs.cache
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.AssemblyInfoInputs.cache
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.AssemblyInfo.cs
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.csproj.CopyComplete
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.dll
+C:\MonitorApi\MonitorProcesos.Datos\obj\Release\netcoreapp2.1\MonitorProcesos.Datos.pdb

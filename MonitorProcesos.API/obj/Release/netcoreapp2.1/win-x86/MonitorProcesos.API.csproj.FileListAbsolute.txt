@@ -22,3 +22,27 @@ C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorP
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.csproj.CopyComplete
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.dll
 C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.pdb
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.dll
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.pdb
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.exe
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.deps.json
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.runtimeconfig.json
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.runtimeconfig.dev.json
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.dll
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.pdb
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Datos.dll
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Entidad.dll
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Negocio.dll
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Utils.dll
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Entidad.pdb
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Negocio.pdb
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Utils.pdb
+C:\MonitorApi\MonitorProcesos.API\bin\Release\netcoreapp2.1\win-x86\MonitorProcesos.Datos.pdb
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.csprojAssemblyReference.cache
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.csproj.CoreCompileInputs.cache
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.RazorAssemblyInfo.cache
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.RazorAssemblyInfo.cs
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.AssemblyInfoInputs.cache
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.AssemblyInfo.cs
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.RazorTargetAssemblyInfo.cache
+C:\MonitorApi\MonitorProcesos.API\obj\Release\netcoreapp2.1\win-x86\MonitorProcesos.API.csproj.CopyComplete

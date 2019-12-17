@@ -9,7 +9,6 @@ C:\Portafolio Proyectos\NOVA\Monitor de Procesos\Codigo\MonitorProcesos\MonitorP
 C:\MonitorApi\MonitorProcesos.Entidad\bin\Debug\netcoreapp2.1\MonitorProcesos.Entidad.deps.json
 C:\MonitorApi\MonitorProcesos.Entidad\bin\Debug\netcoreapp2.1\MonitorProcesos.Entidad.dll
 C:\MonitorApi\MonitorProcesos.Entidad\bin\Debug\netcoreapp2.1\MonitorProcesos.Entidad.pdb
-C:\MonitorApi\MonitorProcesos.Entidad\obj\Debug\netcoreapp2.1\MonitorProcesos.Entidad.csprojAssemblyReference.cache
 C:\MonitorApi\MonitorProcesos.Entidad\obj\Debug\netcoreapp2.1\MonitorProcesos.Entidad.csproj.CoreCompileInputs.cache
 C:\MonitorApi\MonitorProcesos.Entidad\obj\Debug\netcoreapp2.1\MonitorProcesos.Entidad.AssemblyInfoInputs.cache
 C:\MonitorApi\MonitorProcesos.Entidad\obj\Debug\netcoreapp2.1\MonitorProcesos.Entidad.AssemblyInfo.cs
