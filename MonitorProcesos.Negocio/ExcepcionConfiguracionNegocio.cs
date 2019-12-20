@@ -5,12 +5,11 @@ using MonitorProcesos.Entidad.Base;
 using MonitorProcesos.Entidad.Modelo;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class ExcepcionConfiguracionNegocio: Disposable
+    public class ExcepcionConfiguracionNegocio : Disposable
     {
         private readonly ExcepcionConfiguracionDao _dao;
         private RespuestaModel m;
@@ -146,8 +145,6 @@ namespace MonitorProcesos.Negocio
 
             return m;
         }
-
-        
 
         protected override void DisposeCore()
         {

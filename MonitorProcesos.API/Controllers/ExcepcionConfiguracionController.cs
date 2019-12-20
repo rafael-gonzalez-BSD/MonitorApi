@@ -20,7 +20,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerExcepcionConfiguraciones(int Opcion, int SistemaId, int ProcesoId, string ProcesoDescripcion, bool? Baja)
+        public async Task<RespuestaModel> ObtenerExcepcionConfiguraciones(int Opcion, int SistemaId, bool? Baja)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {

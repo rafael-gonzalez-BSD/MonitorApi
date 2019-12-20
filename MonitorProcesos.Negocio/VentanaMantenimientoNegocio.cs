@@ -5,12 +5,11 @@ using MonitorProcesos.Entidad.Base;
 using MonitorProcesos.Entidad.Modelo;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class VentanaMantenimientoNegocio: Disposable
+    public class VentanaMantenimientoNegocio : Disposable
     {
         private readonly VentanaMantenimientoDao _dao;
         private RespuestaModel m;
