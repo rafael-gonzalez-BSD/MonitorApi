@@ -23,14 +23,12 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerProcesos(int Opcion, int VentanaMantenimientoId, string VentanaMantenimientoDescripcion, int SistemaId, int FechaDesde, string FechaHasta, bool? Baja)
+        public async Task<RespuestaModel> ObtenerVentanaMantenimientos(int Opcion, int VentanaMantenimientoId, int SistemaId, DateTime? FechaDesde, DateTime? FechaHasta, bool? Baja)
         {
-            VentanaMantenimientoDescripcion = string.IsNullOrEmpty(VentanaMantenimientoDescripcion) ? "" : VentanaMantenimientoDescripcion;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"Opcion", Opcion },
                 {"VentanaMantenimientoId", VentanaMantenimientoId },
-                {"VentanaMantenimientoDescripcion", VentanaMantenimientoDescripcion },
                 {"SistemaId", SistemaId },
                 {"FechaDesde", FechaDesde },
                 {"FechaHasta", FechaHasta },
