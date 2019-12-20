@@ -38,7 +38,8 @@ namespace MonitorProcesos.API
 
             // ======== CONFIGURACIÓN DE SWAGGER =========
             app.UseSwagger();
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
                 c.SwaggerEndpoint($"{swaggerJsonBasePath}/swagger/v1/swagger.json", "MonitorProcesos v1");
             });

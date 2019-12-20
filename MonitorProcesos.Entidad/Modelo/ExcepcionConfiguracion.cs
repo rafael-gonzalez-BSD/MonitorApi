@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MonitorProcesos.Entidad.Modelo
 {
@@ -33,6 +31,5 @@ namespace MonitorProcesos.Entidad.Modelo
         public int SistemaId { get; set; }
         public string SistemaDescripcion { get; set; }
         public int Opcion { get; set; }
-
     }
 }

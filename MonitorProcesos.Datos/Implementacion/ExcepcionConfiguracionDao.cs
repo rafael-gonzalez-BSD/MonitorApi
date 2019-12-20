@@ -1,13 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Datos.Base;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Datos.Implementacion
 {
-    public class ExcepcionConfiguracionDao: Disposable
+    public class ExcepcionConfiguracionDao : Disposable
     {
         internal DBConnection _db;
 
@@ -23,22 +21,22 @@ namespace MonitorProcesos.Datos.Implementacion
 
         public async Task<IEnumerable<T>> Consultar<T>(Dictionary<string, dynamic> P)
         {
-            return await _db.QueryAsync<T>(P, "[dbo].[spExcepcionConfiguracion_Consultar]");
+            return await _db.QueryAsync<T>(P, "[Bitacora].[spExcepcionConfiguracion_Consultar]");
         }
 
         public async Task<T> ConsultarPor<T>(Dictionary<string, dynamic> P)
         {
-            return await _db.QuerySingleAsync<T>(P, "[dbo].[spExcepcionConfiguracion_Consultar]");
+            return await _db.QuerySingleAsync<T>(P, "[Bitacora].[spExcepcionConfiguracion_Consultar]");
         }
 
         public async Task<T> Insertar<T>(Dictionary<string, dynamic> P)
         {
-            return await _db.QuerySingleAsync<T>(P, "[dbo].[spExcepcionConfiguracion_Insertar]");
+            return await _db.QuerySingleAsync<T>(P, "[Bitacora].[spExcepcionConfiguracion_Insertar]");
         }
 
         public async Task<T> Actualizar<T>(Dictionary<string, dynamic> P)
         {
-            return await _db.QuerySingleAsync<T>(P, "[dbo].[spExcepcionConfiguracion_Actualizar]");
+            return await _db.QuerySingleAsync<T>(P, "[Bitacora].[spExcepcionConfiguracion_Actualizar]");
         }
 
         protected override void DisposeCore()

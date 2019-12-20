@@ -1,13 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Datos.Base;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Datos.Implementacion
 {
-    public class VentanaMantenimientoDao: Disposable
+    public class VentanaMantenimientoDao : Disposable
     {
         internal DBConnection _db;
 

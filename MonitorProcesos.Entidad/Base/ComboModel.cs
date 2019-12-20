@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MonitorProcesos.Entidad.Base
+﻿namespace MonitorProcesos.Entidad.Base
 {
     public class ComboModel
     {
