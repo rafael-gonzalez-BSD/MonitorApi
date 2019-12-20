@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Entidad.Base;
 using MonitorProcesos.Entidad.Modelo;
 using MonitorProcesos.Negocio;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -20,12 +21,11 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerVentanaMantenimientos(int Opcion, int VentanaMantenimientoId, int SistemaId, DateTime? FechaDesde, DateTime? FechaHasta, bool? Baja)
+        public async Task<RespuestaModel> ObtenerVentanaMantenimientos(int Opcion, int SistemaId, DateTime? FechaDesde, DateTime? FechaHasta, bool? Baja)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"Opcion", Opcion },
-                {"VentanaMantenimientoId", VentanaMantenimientoId },
                 {"SistemaId", SistemaId },
                 {"FechaDesde", FechaDesde },
                 {"FechaHasta", FechaHasta },
