@@ -59,7 +59,7 @@ namespace MonitorProcesos.API.Controllers
             return await n.ObtenerSistema(param);
         }
 
-        [HttpPost]        
+        [HttpPost]
         public async Task<RespuestaModel> InsertarSistema(Sistema model)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
