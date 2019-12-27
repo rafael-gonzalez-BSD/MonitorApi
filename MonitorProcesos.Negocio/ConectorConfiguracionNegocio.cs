@@ -48,27 +48,27 @@ namespace MonitorProcesos.Negocio
             return m;
         }
 
-        //public async Task<RespuestaModel> ObtenerComboProceso(Dictionary<string, dynamic> P)
-        //{
-        //    try
-        //    {
-        //        var res = await _dao.Consultar<ComboModel>(P);
-        //        m.Datos = res;
-        //        m.Satisfactorio = true;
-        //        m.Id = 0;
-        //        m.Mensaje = "";
-        //        m.ErrorId = 0;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        m.Datos = null;
-        //        m.Satisfactorio = false;
-        //        m.Id = 0;
-        //        m.Mensaje = "No se pudo realizar la solicitud. " + ex.Message + ". " + ex.InnerException;
-        //        m.ErrorId = 500;
-        //    }
-        //    return m;
-        //}
+        public async Task<RespuestaModel> ObtenerComboConectorConfiguracion(Dictionary<string, dynamic> P)
+        {
+            try
+            {
+                var res = await _dao.Consultar<ComboModel>(P);
+                m.Datos = res;
+                m.Satisfactorio = true;
+                m.Id = 0;
+                m.Mensaje = "";
+                m.ErrorId = 0;
+            }
+            catch (Exception ex)
+            {
+                m.Datos = null;
+                m.Satisfactorio = false;
+                m.Id = 0;
+                m.Mensaje = "No se pudo realizar la solicitud. " + ex.Message + ". " + ex.InnerException;
+                m.ErrorId = 500;
+            }
+            return m;
+        }
 
         public async Task<RespuestaModel> ObtenerConectorConfiguracion(Dictionary<string, dynamic> P)
         {
