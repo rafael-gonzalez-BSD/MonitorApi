@@ -28,5 +28,24 @@ namespace MonitorProcesos.Datos.Implementacion
         {
             return await _db.QuerySingleAsync<T>(P, "[Bitacora].[spVentanaMantenimiento_Insertar]");
         }
+
+        public async Task<T> ConsultarPor<T>(Dictionary<string, dynamic> P)
+        {
+            return await _db.QuerySingleAsync<T>(P, "[Bitacora].[spVentanaMantenimiento_Consultar]");
+        }
+
+        public async Task<T> Actualizar<T>(Dictionary<string, dynamic> P)
+        {
+            return await _db.QuerySingleAsync<T>(P, "[Bitacora].[spVentanaMantenimiento_Actualizar]");
+        }
+
+        protected override void DisposeCore()
+        {
+            if (_db != null)
+            {
+                _db.Dispose();
+            }
+            Dispose();
+        }
     }
 }

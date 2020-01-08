@@ -34,6 +34,18 @@ namespace MonitorProcesos.API.Controllers
             return await n.ObtenerVentanaMantenimientos(param);
         }
 
+        [HttpGet("by")]
+        public async Task<RespuestaModel> ObtenerVentanaMantenimiento(int VentanaMantenimientoId, int Opcion, bool? Baja)
+        {
+            Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
+            {
+                {"Opcion", Opcion },
+                {"VentanaMantenimientoId", VentanaMantenimientoId },
+                {"Baja", Baja }
+            };
+            return await n.ObtenerVentanaMantenimiento(param);
+        }
+
         [HttpPost]
         public async Task<RespuestaModel> InsertarVentanaMantenimiento(VentanaMantenimiento model)
         {
@@ -42,11 +54,44 @@ namespace MonitorProcesos.API.Controllers
                 {"Opcion", model.Opcion },
                 {"SistemaId", model.SistemaId },
                 {"FechaDesde", model.FechaDesde },
+                {"HoraDesde", model.HoraDesde },
                 {"FechaHasta", model.FechaHasta },
+                {"HoraHasta", model.HoraHasta },
                 {"UsuarioCreacionId", 1 },
                 {"Baja", model.Baja }
             };
             return await n.InsertarVentanaMantenimiento(param);
+        }
+
+        [HttpPut]
+        public async Task<RespuestaModel> ActualizarExcepcionConfiguracion(VentanaMantenimiento model)
+        {
+            Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
+            {
+                {"Opcion", model.Opcion },
+                { "VentanaMantenimientoId", model.VentanaMantenimientoId },
+                {"SistemaId", model.SistemaId },
+                {"FechaDesde", model.FechaDesde },
+                {"HoraDesde", model.HoraDesde },
+                {"FechaHasta", model.FechaHasta },
+                {"HoraHasta", model.HoraHasta },
+                {"UsuarioModificacionId", 1 },
+                {"Baja", model.Baja }
+            };
+            return await n.ActualizarVentanaMantenimiento(param);
+        }
+
+        [HttpPatch]
+        public async Task<RespuestaModel> ActualizarEstado(VentanaMantenimiento model)
+        {
+            Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
+            {
+                {"Opcion", model.Opcion },
+                {"VentanaMantenimientoId", model.VentanaMantenimientoId },
+                {"UsuarioModificacionId", 1 },
+                {"Baja", model.Baja }
+            };
+            return await n.ActualizarEstado(param);
         }
     }
 }
