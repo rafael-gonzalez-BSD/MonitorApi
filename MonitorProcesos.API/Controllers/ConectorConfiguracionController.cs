@@ -33,13 +33,14 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("combo")]
-        public async Task<RespuestaModel> ObtenerComboConectorConfiguracion(int Opcion, int ConectorConfiguracionId, string ConectorConfiguracionDescripcion, bool? Baja)
+        public async Task<RespuestaModel> ObtenerComboConectorConfiguracion(int Opcion, int SistemaId, int ConectorConfiguracionId, string ConectorConfiguracionDescripcion, bool? Baja)
         {
             ConectorConfiguracionDescripcion = string.IsNullOrEmpty(ConectorConfiguracionDescripcion) ? "" : ConectorConfiguracionDescripcion;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"ConectorConfiguracionId", ConectorConfiguracionId },
                 {"ConectorConfiguracionDescripcion", ConectorConfiguracionDescripcion },
+                {"SistemaId", SistemaId },
                 {"Opcion", Opcion },
                 {"Baja", Baja }
             };
