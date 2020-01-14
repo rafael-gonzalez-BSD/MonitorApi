@@ -12,13 +12,13 @@ namespace MonitorProcesos.API.Controllers
         [HttpGet("testRutaApi")]
         public RespuestaModel TestearRutaApi(string urlApi)
         {
-            RespuestaModel res = new RespuestaModel();            
+            RespuestaModel res = new RespuestaModel();
 
             try
             {
                 Uri uri = new Uri(urlApi);
                 Ping ping = new Ping();
-                PingReply result = ping.Send(uri.Host);                
+                PingReply result = ping.Send(uri.Host);
 
                 if (result.Status == IPStatus.Success)
                 {
@@ -47,7 +47,47 @@ namespace MonitorProcesos.API.Controllers
                 res.Satisfactorio = false;
             }
 
+
+
+            return res;
+        }
+
+        [HttpGet("testRutaArchivos")]
+        public RespuestaModel TestearRutaArchivos(string url)
+        {
+            RespuestaModel res = new RespuestaModel();
             
+            try
+            {
+                bool existe = Utils.FileSystemScanner.UrlDirectoryExist(url);
+                //bool prueba2 = Utils.FileSystemScanner.UrlDirectoryDownload(url);
+
+                if (existe)
+                {
+                    res.Datos = null;
+                    res.ErrorId = 0;
+                    res.Id = 0;
+                    res.Mensaje = "El directorio si existe";
+                    res.Satisfactorio = true;
+                }
+                else
+                {
+                    res.Datos = null;
+                    res.ErrorId = 404;
+                    res.Id = 0;
+                    res.Mensaje = "El directorio no existe";
+                    res.Satisfactorio = false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                res.Datos = null;
+                res.ErrorId = 500;
+                res.Id = 0;
+                res.Mensaje = "Error interno del sistema. " + ex.Message + ": " + ex.InnerException.ToString();
+                res.Satisfactorio = false;
+            }
 
             return res;
         }

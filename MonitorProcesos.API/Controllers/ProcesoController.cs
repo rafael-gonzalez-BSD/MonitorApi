@@ -104,18 +104,5 @@ namespace MonitorProcesos.API.Controllers
             };
             return await n.ActualizarEstado(param);
         }
-
-        [HttpPatch("critico")]
-        public async Task<RespuestaModel> ActualizarCritico(Proceso model)
-        {
-            Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
-            {
-                {"Opcion", model.Opcion },
-                {"ProcesoId", model.ProcesoId },
-                {"Critico", model.Critico },
-                {"UsuarioModificacionId", 1 }
-            };
-            return await n.ActualizarCritico(param);
-        }
     }
 }

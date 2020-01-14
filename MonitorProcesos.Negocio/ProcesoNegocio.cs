@@ -146,24 +146,6 @@ namespace MonitorProcesos.Negocio
             return m;
         }
 
-        public async Task<RespuestaModel> ActualizarCritico(Dictionary<string, dynamic> P)
-        {
-            try
-            {
-                m = await _dao.Actualizar<RespuestaModel>(P);
-            }
-            catch (Exception ex)
-            {
-                m.Id = 0;
-                m.ErrorId = -2;
-                m.Satisfactorio = false;
-                m.Datos = null;
-                m.Mensaje = ex.Message + ". " + ex.InnerException;
-            }
-
-            return m;
-        }
-
         protected override void DisposeCore()
         {
             if (_dao != null)
