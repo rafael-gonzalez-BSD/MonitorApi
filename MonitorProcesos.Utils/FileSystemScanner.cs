@@ -1,6 +1,8 @@
-﻿using System.Diagnostics;
-using System.Linq;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Net;
+using System.Text.RegularExpressions;
 
 namespace MonitorProcesos.Utils
 {
@@ -22,7 +24,7 @@ namespace MonitorProcesos.Utils
             }
             catch (WebException ex)
             {
-                string log = string.Format("{0} doesn't exist: {1}. {2}", url, ex.Message, ex.InnerException);
+                string log = string.Format("La ruta {0} no existe: {1}. {2}", url, ex.Message, ex.InnerException);
                 Debug.WriteLine(log);
             }
             finally
@@ -47,18 +49,19 @@ namespace MonitorProcesos.Utils
             try
             {
                 res = (HttpWebResponse)req.GetResponse();
-                using (System.IO.StreamReader reader = new System.IO.StreamReader(res.GetResponseStream()))
+                using (StreamReader reader = new StreamReader(res.GetResponseStream()))
                 {
                     string html = reader.ReadToEnd();
-                    System.Text.RegularExpressions.Regex regEx = new System.Text.RegularExpressions.Regex("href=\\\"([^\\\"]*)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                    System.Text.RegularExpressions.MatchCollection matches = regEx.Matches(html);
+                    Regex regEx = new Regex(@"href\s*=\s*(?:[""'](?<filename>[^""']*[.zip])[""']|(?<filename>[.zip]\S+))", RegexOptions.IgnoreCase | RegexOptions.Compiled, TimeSpan.FromSeconds(1));
+                    MatchCollection matches = regEx.Matches(html);
+
                     if (matches.Count > 0)
                     {
-                        foreach (System.Text.RegularExpressions.Match match in matches.Where(x => x.Success))
+                        foreach (Match match in matches)
                         {
-                            foreach (var item in match.Groups.Where(y => y.Value.ToString().Contains("zip") && !y.Value.ToString().Contains("href")))
+                            if (match.Success)
                             {
-                                Debug.WriteLine(item.Value);
+                                Debug.WriteLine(match.Groups["filename"].Value);
                             }
                         }
                     }
@@ -67,7 +70,7 @@ namespace MonitorProcesos.Utils
             }
             catch (WebException ex)
             {
-                string log = string.Format("{0} doesn't exist: {1}. {2}", url, ex.Message, ex.InnerException);
+                string log = string.Format("La ruta {0} no existe: {1}. {2}", url, ex.Message, ex.InnerException);
                 Debug.WriteLine(log);
             }
             finally
@@ -79,6 +82,13 @@ namespace MonitorProcesos.Utils
             }
 
             return exists;
+        }
+
+        public static void MapLog() {
+            string pathLog = Path.Combine(Directory.GetCurrentDirectory(), "Log");
+            string[] files = Directory.GetFiles(pathLog);
+
+
         }
     }
 }

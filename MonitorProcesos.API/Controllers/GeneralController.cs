@@ -10,56 +10,24 @@ namespace MonitorProcesos.API.Controllers
     public class GeneralController : ControllerBase
     {
         [HttpGet("testRutaApi")]
-        public RespuestaModel TestearRutaApi(string urlApi)
+        public RespuestaPeticionModel TestearRutaApi()
         {
-            RespuestaModel res = new RespuestaModel();
-
-            try
+            return new RespuestaPeticionModel
             {
-                Uri uri = new Uri(urlApi);
-                Ping ping = new Ping();
-                PingReply result = ping.Send(uri.Host);
-
-                if (result.Status == IPStatus.Success)
-                {
-                    res.Datos = null;
-                    res.ErrorId = 0;
-                    res.Id = 0;
-                    res.Mensaje = "Ping Satisfactorio";
-                    res.Satisfactorio = true;
-                }
-                else
-                {
-                    res.Datos = null;
-                    res.ErrorId = 404;
-                    res.Id = 0;
-                    res.Mensaje = "Error al hacer ping";
-                    res.Satisfactorio = false;
-                }
-            }
-            catch (Exception ex)
-            {
-
-                res.Datos = null;
-                res.ErrorId = 500;
-                res.Id = 0;
-                res.Mensaje = "Error interno del sistema. " + ex.Message + ": " + ex.InnerException.ToString();
-                res.Satisfactorio = false;
-            }
-
-
-
-            return res;
+                Clave = 1,
+                Valor = "Éxito",
+                Descripcion = ""
+            };
         }
 
         [HttpGet("testRutaArchivos")]
-        public RespuestaModel TestearRutaArchivos(string url)
+        public RespuestaModel TestearRutaArchivos(string RutaLog)
         {
             RespuestaModel res = new RespuestaModel();
-            
+
             try
             {
-                bool existe = Utils.FileSystemScanner.UrlDirectoryExist(url);
+                bool existe = Utils.FileSystemScanner.UrlDirectoryExist(RutaLog);
                 //bool prueba2 = Utils.FileSystemScanner.UrlDirectoryDownload(url);
 
                 if (existe)
@@ -81,11 +49,10 @@ namespace MonitorProcesos.API.Controllers
             }
             catch (Exception ex)
             {
-
                 res.Datos = null;
                 res.ErrorId = 500;
                 res.Id = 0;
-                res.Mensaje = "Error interno del sistema. " + ex.Message + ": " + ex.InnerException.ToString();
+                res.Mensaje = "Error interno del sistema. " + ex.Message + ": " + ex.InnerException?.ToString();
                 res.Satisfactorio = false;
             }
 
