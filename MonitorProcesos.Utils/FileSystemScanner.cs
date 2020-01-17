@@ -84,11 +84,10 @@ namespace MonitorProcesos.Utils
             return exists;
         }
 
-        public static void MapLog() {
+        public static void MapLog()
+        {
             string pathLog = Path.Combine(Directory.GetCurrentDirectory(), "Log");
             string[] files = Directory.GetFiles(pathLog);
-
-
         }
     }
 }

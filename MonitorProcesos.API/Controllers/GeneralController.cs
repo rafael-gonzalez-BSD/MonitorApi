@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonitorProcesos.Entidad.Base;
 using System;
-using System.Net.NetworkInformation;
 
 namespace MonitorProcesos.API.Controllers
 {

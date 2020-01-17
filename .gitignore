@@ -4,3 +4,9 @@
 
 /.vs/MonitorProcesos/v15/Server/sqlite3
 bin
+/MonitorProcesos.WindowsService/obj/Debug
+/MonitorProcesos.Utils/obj
+/MonitorProcesos.Negocio/obj
+/MonitorProcesos.Entidad/obj
+/MonitorProcesos.Datos/obj/MonitorProcesos.Datos.csproj.nuget.dgspec.json
+/MonitorProcesos.API/obj

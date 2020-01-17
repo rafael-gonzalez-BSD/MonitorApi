@@ -35,7 +35,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("by")]
-        public async Task<RespuestaModel> ObtenerVentanaMantenimiento(int VentanaMantenimientoId, int SistemaId,int Opcion, bool? Baja)
+        public async Task<RespuestaModel> ObtenerVentanaMantenimiento(int VentanaMantenimientoId, int SistemaId, int Opcion, bool? Baja)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
