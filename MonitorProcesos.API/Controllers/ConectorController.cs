@@ -12,17 +12,17 @@ namespace MonitorProcesos.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EjecucionController : ControllerBase
+    public class ConectorController : ControllerBase
     {
-        private readonly EjecucionNegocio n;
+        private readonly ConectorNegocio n;
 
-        public EjecucionController(IConfiguration config)
+        public ConectorController(IConfiguration config)
         {
-            n = new EjecucionNegocio(config, "MonitorRemoteDev");
+            n = new ConectorNegocio(config, "MonitorRemoteDev");
         }
 
         [HttpGet("grafico")]
-        public async Task<RespuestaModel> ObtenerGraficoEjecuciones(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        public async Task<RespuestaModel> ObtenerGraficoConectores(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int SistemaId = 0)
         {
             FechaOcurrencia = FechaOcurrencia == null ? DateTime.Today : FechaOcurrencia;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
@@ -32,7 +32,7 @@ namespace MonitorProcesos.API.Controllers
                 {"Baja", Baja },
                 {"sistemaId", SistemaId }
             };
-            return await n.ObtenerGraficoEjecuciones(param);
+            return await n.ObtenerGraficoConectores(param);
         }
     }
 }

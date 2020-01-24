@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using MonitorProcesos.Datos.Base;
 using MonitorProcesos.Datos.Implementacion;
 using MonitorProcesos.Entidad.Base;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class ExcepcionNegocio
+    public class ExcepcionNegocio: Disposable
     {
         private readonly ExcepcionDao _dao;
         private RespuestaModel m;

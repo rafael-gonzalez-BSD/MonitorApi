@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class EjecucionNegocio: Disposable
+    public class ConectorNegocio: Disposable
     {
-        private readonly EjecucionDao _dao;
+        private readonly ConectorDao _dao;
         private RespuestaModel m;
 
-        public EjecucionNegocio(IConfiguration config)
+        public ConectorNegocio(IConfiguration config)
         {
-            _dao = new EjecucionDao(config);
+            _dao = new ConectorDao(config);
             m = new RespuestaModel();
         }
 
-        public EjecucionNegocio(IConfiguration config, string con)
+        public ConectorNegocio(IConfiguration config, string con)
         {
-            _dao = new EjecucionDao(config, con);
+            _dao = new ConectorDao(config, con);
             m = new RespuestaModel();
         }
 
-        public async Task<RespuestaModel> ObtenerGraficoEjecuciones(Dictionary<string, dynamic> P)
+        public async Task<RespuestaModel> ObtenerGraficoConectores(Dictionary<string, dynamic> P)
         {
             try
             {
