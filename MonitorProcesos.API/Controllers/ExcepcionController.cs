@@ -22,7 +22,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("grafico")]
-        public async Task<RespuestaModel> ObtenerGraficoSistema(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int ExcepcionId = 0, int SistemaId = 0)
+        public async Task<RespuestaModel> ObtenerGraficoExcepciones(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int ExcepcionId = 0, int SistemaId = 0)
         {
             FechaOcurrencia = FechaOcurrencia == null ? DateTime.Today : FechaOcurrencia;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
