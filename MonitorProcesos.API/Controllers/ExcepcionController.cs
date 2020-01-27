@@ -21,14 +21,43 @@ namespace MonitorProcesos.API.Controllers
             n = new ExcepcionNegocio(config, "MonitorRemoteDev");
         }
 
-        [HttpGet("grafico")]
-        public async Task<RespuestaModel> ObtenerGraficoExcepciones(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        [HttpGet("all")]
+        public async Task<RespuestaModel> ObtenerExcepciones(int Opcion, bool? Baja, DateTime? FechaDesde, DateTime? FechaHasta, int ExcepcionId = 0, int SistemaId = 0, int ExcepcionEstatusId = 1)
         {
-            FechaOcurrencia = FechaOcurrencia == null ? DateTime.Today : FechaOcurrencia;
+            if (FechaDesde != null && FechaHasta == null)
+            {
+                FechaHasta = FechaDesde;
+
+            }
+            else if (FechaHasta != null && FechaDesde == null)
+            {
+                FechaDesde = FechaHasta;
+
+            }
+
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"Opcion", Opcion },
-                {"FechaOcurrencia", FechaOcurrencia },
+                {"Baja", Baja },
+                {"FechaDesde", FechaDesde },
+                {"FechaHasta", FechaHasta },
+                {"ExcepcionId", ExcepcionId },
+                {"SistemaId", SistemaId },
+                {"ExcepcionEstatusId", ExcepcionEstatusId  },
+                
+                
+            };
+            return await n.ObtenerExcepciones(param);
+        }
+
+        [HttpGet("grafico")]
+        public async Task<RespuestaModel> ObtenerGraficoExcepciones(DateTime? FechaDesde, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        {
+            FechaDesde = FechaDesde == null ? DateTime.Today : FechaDesde;
+            Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
+            {
+                {"Opcion", Opcion },
+                {"FechaDesde", FechaDesde },
                 {"Baja", Baja },
                 {"sistemaId", SistemaId }
             };
