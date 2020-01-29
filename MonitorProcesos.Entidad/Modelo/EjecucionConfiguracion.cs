@@ -40,6 +40,8 @@ namespace MonitorProcesos.Entidad.Modelo
 
         public string ProcesoDescripcion { get; set; }
 
+        public string VentanaMantenimiento { get; set; }
+
         public int Opcion { get; set; }
     }
 }
