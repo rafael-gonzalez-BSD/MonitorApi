@@ -20,7 +20,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerEjecucionConfiguraciones(int Opcion, int SistemaId, int ProcesoId, bool? Baja, int EjecucionConfiguracionId = 0)
+        public async Task<RespuestaModel> ObtenerEjecucionConfiguraciones(int Opcion, int SistemaId, int ProcesoId, bool? SistemaBaja, bool? ProcesoBaja, bool? Baja, int EjecucionConfiguracionId = 0)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
@@ -28,7 +28,9 @@ namespace MonitorProcesos.API.Controllers
                 {"SistemaId", SistemaId },
                 {"ProcesoId", ProcesoId },
                 {"Opcion", Opcion },
-                {"Baja", Baja }
+                {"Baja", Baja },
+                {"SistemaBaja", SistemaBaja},
+                {"ProcesoBaja", ProcesoBaja}
             };
             return await n.ObtenerEjecucionConfiguraciones(param);
         }

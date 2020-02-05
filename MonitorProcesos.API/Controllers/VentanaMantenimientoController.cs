@@ -21,7 +21,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerVentanaMantenimientos(int Opcion, int SistemaId, DateTime? FechaDesde, DateTime? FechaHasta, bool? Baja)
+        public async Task<RespuestaModel> ObtenerVentanaMantenimientos(int Opcion, int SistemaId, DateTime? FechaDesde, DateTime? FechaHasta, bool? SistemaBaja, bool? Baja)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
@@ -29,7 +29,8 @@ namespace MonitorProcesos.API.Controllers
                 {"SistemaId", SistemaId },
                 {"FechaDesde", FechaDesde },
                 {"FechaHasta", FechaHasta },
-                {"Baja", Baja }
+                {"Baja", Baja },
+                {"SistemaBaja", SistemaBaja}
             };
             return await n.ObtenerVentanaMantenimientos(param);
         }

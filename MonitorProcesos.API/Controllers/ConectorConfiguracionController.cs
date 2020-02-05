@@ -20,14 +20,15 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerConectorConfiguraciones(int Opcion, int SistemaId, int ConectorConfiguracionId, bool? Baja)
+        public async Task<RespuestaModel> ObtenerConectorConfiguraciones(int Opcion, int SistemaId, int ConectorConfiguracionId, bool? SistemaBaja, bool? Baja)
         {
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"SistemaId", SistemaId },
                 { "ConectorConfiguracionId", ConectorConfiguracionId },
                 {"Opcion", Opcion },
-                {"Baja", Baja }
+                {"Baja", Baja },
+                {"SistemaBaja", SistemaBaja }
             };
             return await n.ObtenerConectorConfiguraciones(param);
         }

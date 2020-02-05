@@ -20,7 +20,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("all")]
-        public async Task<RespuestaModel> ObtenerProcesos(int Opcion, int SistemaId, int ProcesoId, string ProcesoDescripcion, bool? Baja)
+        public async Task<RespuestaModel> ObtenerProcesos(int Opcion, int SistemaId, int ProcesoId, string ProcesoDescripcion, bool? SistemaBaja, bool? Baja)
         {
             ProcesoDescripcion = string.IsNullOrEmpty(ProcesoDescripcion) ? "" : ProcesoDescripcion;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
@@ -29,7 +29,8 @@ namespace MonitorProcesos.API.Controllers
                 {"SistemaId", SistemaId },
                 {"ProcesoDescripcion", ProcesoDescripcion },
                 {"Opcion", Opcion },
-                {"Baja", Baja }
+                {"Baja", Baja },
+                {"SistemaBaja", SistemaBaja}
             };
             return await n.ObtenerProcesos(param);
         }
