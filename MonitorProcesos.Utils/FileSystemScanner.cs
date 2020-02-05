@@ -38,6 +38,17 @@ namespace MonitorProcesos.Utils
             return exists;
         }
 
+        public static bool PathDirectoryExist(string path) {
+
+            bool exists = false;
+            if (Directory.Exists(@path))
+            {
+                exists = true;
+            }
+
+            return exists;
+        }
+
         public static bool UrlDirectoryDownload(string url)
         {
             HttpWebResponse res = null;
@@ -82,12 +93,6 @@ namespace MonitorProcesos.Utils
             }
 
             return exists;
-        }
-
-        public static void MapLog()
-        {
-            string pathLog = Path.Combine(Directory.GetCurrentDirectory(), "Log");
-            string[] files = Directory.GetFiles(pathLog);
-        }
+        }       
     }
 }
