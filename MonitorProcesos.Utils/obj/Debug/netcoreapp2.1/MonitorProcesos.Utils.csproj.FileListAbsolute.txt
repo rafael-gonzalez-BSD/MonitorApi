@@ -15,3 +15,12 @@ C:\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Util
 C:\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.AssemblyInfo.cs
 C:\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.dll
 C:\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.pdb
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\bin\Debug\netcoreapp2.1\MonitorProcesos.Utils.deps.json
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\bin\Debug\netcoreapp2.1\MonitorProcesos.Utils.dll
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\bin\Debug\netcoreapp2.1\MonitorProcesos.Utils.pdb
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.csprojAssemblyReference.cache
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.csproj.CoreCompileInputs.cache
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.AssemblyInfoInputs.cache
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.AssemblyInfo.cs
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.dll
+C:\MonitorApi202001201040\rafael-gonzalez-BSD\MonitorApi\MonitorProcesos.Utils\obj\Debug\netcoreapp2.1\MonitorProcesos.Utils.pdb
