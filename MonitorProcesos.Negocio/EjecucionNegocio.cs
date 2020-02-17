@@ -1,7 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿
+using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Datos.Base;
 using MonitorProcesos.Datos.Implementacion;
 using MonitorProcesos.Entidad.Base;
+using MonitorProcesos.Entidad.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class EjecucionNegocio: Disposable
+    public class EjecucionNegocio : Disposable
     {
         private readonly EjecucionDao _dao;
         private RespuestaModel m;
@@ -47,5 +49,39 @@ namespace MonitorProcesos.Negocio
             }
             return m;
         }
+
+        public async Task<RespuestaModel> ObtenerEjecuciones(Dictionary<string, dynamic> P)
+        {
+            try
+            {
+                var res = await _dao.Consultar<Ejecucion>(P);
+                m.Datos = res;
+                m.Satisfactorio = true;
+                m.Id = 0;
+                m.Mensaje = "";
+                m.ErrorId = 0;
+            }
+            catch (Exception ex)
+            {
+                m.Datos = null;
+                m.Satisfactorio = false;
+                m.Id = 0;
+                m.Mensaje = "No se pudo realizar la solicitud. " + ex.Message + ". " + ex.InnerException;
+                m.ErrorId = 500;
+            }
+            return m;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

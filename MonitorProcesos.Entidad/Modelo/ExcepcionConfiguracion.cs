@@ -30,7 +30,11 @@ namespace MonitorProcesos.Entidad.Modelo
 
         public int SistemaId { get; set; }
         public string SistemaDescripcion { get; set; }
-        public string VentanaMantenimiento { get; set; }
+        public DateTime FechaDesdeVentana { get; set; }
+        public TimeSpan HoraDesdeVentana { get; set; }
+        public DateTime FechaHastaVentana { get; set; }
+        public TimeSpan HoraHastaVentana { get; set; }
+        public bool BajaVentana { get; set; }
         public int Opcion { get; set; }
     }
 }
