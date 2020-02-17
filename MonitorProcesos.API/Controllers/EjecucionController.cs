@@ -21,14 +21,43 @@ namespace MonitorProcesos.API.Controllers
             n = new EjecucionNegocio(config, "MonitorRemoteDev");
         }
 
-        [HttpGet("grafico")]
-        public async Task<RespuestaModel> ObtenerGraficoEjecuciones(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        [HttpGet("all")]
+        public async Task<RespuestaModel> ObtenerEjecuciones(int Opcion, bool? Baja, DateTime? FechaDesde, DateTime? FechaHasta, int EjecucionId = 0, int SistemaId = 0, int ProcesoId = 0)
         {
-            FechaOcurrencia = FechaOcurrencia == null ? DateTime.Today : FechaOcurrencia;
+            if (FechaDesde != null && FechaHasta == null)
+            {
+                FechaHasta = FechaDesde;
+
+            }
+            else if (FechaHasta != null && FechaDesde == null)
+            {
+                FechaDesde = FechaHasta;
+
+            }
+
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"Opcion", Opcion },
-                {"FechaOcurrencia", FechaOcurrencia },
+                {"Baja", Baja },
+                {"FechaDesde", FechaDesde },
+                {"FechaHasta", FechaHasta },
+                {"EjecucionId", EjecucionId },
+                {"SistemaId", SistemaId },
+                {"ProcesoId", ProcesoId  },
+
+
+            };
+            return await n.ObtenerEjecuciones(param);
+        }
+
+        [HttpGet("grafico")]
+        public async Task<RespuestaModel> ObtenerGraficoEjecuciones(DateTime FechaDesde, DateTime FechaHasta, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        {
+            Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
+            {
+                {"Opcion", Opcion },
+                {"FechaDesde", FechaDesde },
+                {"FechaHasta", FechaHasta },
                 {"Baja", Baja },
                 {"sistemaId", SistemaId }
             };
