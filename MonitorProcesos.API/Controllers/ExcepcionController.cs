@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Entidad.Base;
 using MonitorProcesos.Negocio;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MonitorProcesos.API.Controllers
 {
@@ -27,12 +25,10 @@ namespace MonitorProcesos.API.Controllers
             if (FechaDesde != null && FechaHasta == null)
             {
                 FechaHasta = FechaDesde;
-
             }
             else if (FechaHasta != null && FechaDesde == null)
             {
                 FechaDesde = FechaHasta;
-
             }
 
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
@@ -44,8 +40,6 @@ namespace MonitorProcesos.API.Controllers
                 {"ExcepcionId", ExcepcionId },
                 {"SistemaId", SistemaId },
                 {"ExcepcionEstatusId", ExcepcionEstatusId  },
-                
-                
             };
             return await n.ObtenerExcepciones(param);
         }

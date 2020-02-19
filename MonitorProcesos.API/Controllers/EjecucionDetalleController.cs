@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Entidad.Base;
 using MonitorProcesos.Negocio;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MonitorProcesos.API.Controllers
 {

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace MonitorProcesos.Datos.Implementacion
 {
-    public class MonitorConfiguracionDao: Disposable
+    public class MonitorConfiguracionDao : Disposable
     {
-        internal DBConnection _db;       
+        internal DBConnection _db;
 
         public MonitorConfiguracionDao(IConfiguration config)
         {

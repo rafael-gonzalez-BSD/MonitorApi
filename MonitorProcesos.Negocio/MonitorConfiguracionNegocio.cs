@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class MonitorConfiguracionNegocio: Disposable
+    public class MonitorConfiguracionNegocio : Disposable
     {
         private readonly MonitorConfiguracionDao _dao;
         private readonly RespuestaModel m;

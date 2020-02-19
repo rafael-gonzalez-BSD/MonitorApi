@@ -4,12 +4,11 @@ using MonitorProcesos.Datos.Implementacion;
 using MonitorProcesos.Entidad.Base;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class ExcepcionEstatusNegocio: Disposable
+    public class ExcepcionEstatusNegocio : Disposable
     {
         private readonly ExcepcionEstatusDao _dao;
         private RespuestaModel m;

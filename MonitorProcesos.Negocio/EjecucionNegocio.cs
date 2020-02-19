@@ -1,12 +1,10 @@
-﻿
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Datos.Base;
 using MonitorProcesos.Datos.Implementacion;
 using MonitorProcesos.Entidad.Base;
 using MonitorProcesos.Entidad.Modelo;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
@@ -73,15 +71,3 @@ namespace MonitorProcesos.Negocio
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

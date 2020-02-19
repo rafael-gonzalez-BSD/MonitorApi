@@ -1,13 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MonitorProcesos.Datos.Base;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Datos.Implementacion
 {
-    public class ExcepcionEstatusDao: Disposable
+    public class ExcepcionEstatusDao : Disposable
     {
         internal DBConnection _db;
 

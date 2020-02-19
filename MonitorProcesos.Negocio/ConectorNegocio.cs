@@ -4,12 +4,11 @@ using MonitorProcesos.Datos.Implementacion;
 using MonitorProcesos.Entidad.Base;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MonitorProcesos.Negocio
 {
-    public class ConectorNegocio: Disposable
+    public class ConectorNegocio : Disposable
     {
         private readonly ConectorDao _dao;
         private RespuestaModel m;
