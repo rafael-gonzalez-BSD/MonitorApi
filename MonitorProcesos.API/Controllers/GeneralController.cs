@@ -39,11 +39,11 @@ namespace MonitorProcesos.API.Controllers
             string mensaje = "";
             RespuestaModel res = new RespuestaModel();
             string ip = @"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}";
-            string pattern = string.Format(@"^[A-Z]:(\\(\w+\s*)+)+" + // filename
-                             @"|^\\\\{0}(\\(\w+\s*)+)+" +              // url with ip
-                             @"|^\\(\\(\w+\s*)+)+" +                   // network filename \\abc\def
-                             @"|^FTP://{0}/" +                         // ftp with ip
-                             @"|^FTP://[A-Z]\w+/", ip);                // ftp with hostname
+            string pattern = string.Format(@"^[A-Z]:(\\(\w+\s*)+)+" +
+                             @"|^\\\\{0}(\\(\w+\s*)+)+" +
+                             @"|^\\(\\(\w+\s*)+)+" +
+                             @"|^FTP://{0}/" +
+                             @"|^FTP://[A-Z]\w+/", ip);
 
             try
             {
@@ -81,7 +81,7 @@ namespace MonitorProcesos.API.Controllers
                 res.Datos = null;
                 res.ErrorId = existe ? 0 : 404;
                 res.Id = 0;
-                res.Mensaje = existe ? "La ruta si existe" : mensaje;
+                res.Mensaje = existe ? "La ruta si existe" : mensaje.Length > 0 ? mensaje : "La ruta es invalida";
                 res.Satisfactorio = existe;
             }
             catch (Exception ex)
