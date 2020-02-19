@@ -20,13 +20,13 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("grafico")]
-        public async Task<RespuestaModel> ObtenerGraficoConectores(DateTime? FechaOcurrencia, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        public async Task<RespuestaModel> ObtenerGraficoConectores(DateTime? FechaDesde, DateTime? FechaHasta, bool? Baja, int Opcion = 5, int SistemaId = 0)
         {
-            FechaOcurrencia = FechaOcurrencia == null ? DateTime.Today : FechaOcurrencia;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
                 {"Opcion", Opcion },
-                {"FechaOcurrencia", FechaOcurrencia },
+                {"FechaDesde", FechaDesde },
+                {"FechaHasta", FechaHasta },
                 {"Baja", Baja },
                 {"sistemaId", SistemaId }
             };
