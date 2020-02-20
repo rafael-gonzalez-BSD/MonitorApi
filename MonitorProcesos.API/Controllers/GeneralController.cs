@@ -56,7 +56,7 @@ namespace MonitorProcesos.API.Controllers
                         foreach (string filename in files.Where(x => x.Contains(".txt")))
                         {
                             string[] filenameArray = filename.Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
-                            if (filenameArray[filenameArray.Length - 1].Contains("LogExep.txt") || filenameArray[filenameArray.Length - 1].Contains("LogEjec.txt"))
+                            if (filenameArray[filenameArray.Length - 1].Contains("LogExec.txt") || filenameArray[filenameArray.Length - 1].Contains("LogEjec.txt"))
                             {
                                 string urlFile = Path.Combine(RutaLog, filenameArray[filenameArray.Length - 1]);
                                 bool canRead = Utils.FileSystemScanner.GetLogFile(urlFile, out string mensajeArchivo);
