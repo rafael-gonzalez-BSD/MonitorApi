@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -41,7 +42,7 @@ namespace MonitorProcesos.Utils
                         }
                         else
                         {
-                            mensaje = "La ruta no encontró archivos";
+                            mensaje = "No se encontro el archivo de Test";
                         }
                     }
                 }
@@ -66,95 +67,82 @@ namespace MonitorProcesos.Utils
             return files;
         }
 
-        public static bool PathDirectoryExist(string path)
-        {
-            bool exists = false;
-            if (Directory.Exists(@path))
+        public static List<string> PathDirectoryExist(string path, out string mensaje)
+        {            
+            mensaje = "";
+            List<string> files = new List<string>();
+            try
             {
-                exists = true;
+                if (Directory.Exists(@path))
+                {
+                    files = Directory.GetFiles(path).ToList();
+                    if (files.Count == 0)
+                    {
+                        mensaje = "No se encontro el archivo de Test";
+                    }
+                }
+                else
+                {
+                    mensaje = "La ruta no existe";
+                }
+            }
+            catch
+            {
+
+                mensaje = "La ruta no existe";
             }
 
-            return exists;
+            return files;
         }
 
-        public static bool GetLogFile(string urlFile, out string mensaje)
+        public static bool GetLogFile(string urlFile, int tipoDirectorio,out string mensaje)
         {
             mensaje = "";
             bool canRead = true;
             string completeFile;
             HttpWebResponse res = null;
 
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(urlFile);
-            req.Method = "GET";
-
-            try
+            switch (tipoDirectorio)
             {
-                res = (HttpWebResponse)req.GetResponse();
-                using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
-                {
-                    completeFile = reader.ReadToEnd();
-                }
-            }
-            catch (WebException ex)
-            {
-                mensaje = string.Format("El archivo no existe o no se pudo leer: {0}. {1}", ex.Message, ex.InnerException);
-                canRead = false;
-            }
-            finally
-            {
-                if (res != null)
-                {
-                    res.Close();
-                }
-            }
+                case 2:
+                    HttpWebRequest req = (HttpWebRequest)WebRequest.Create(urlFile);
+                    req.Method = "GET";
 
-            return canRead;
-        }
-
-        public static bool UrlDirectoryDownload(string url)
-        {
-            HttpWebResponse res = null;
-            bool exists = false;
-
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-            req.Method = "GET";
-
-            try
-            {
-                res = (HttpWebResponse)req.GetResponse();
-                using (StreamReader reader = new StreamReader(res.GetResponseStream()))
-                {
-                    string html = reader.ReadToEnd();
-                    Regex regEx = new Regex(@"href\s*=\s*(?:[""'](?<filename>[^""']*[.zip])[""']|(?<filename>[.zip]\S+))", RegexOptions.IgnoreCase | RegexOptions.Compiled, TimeSpan.FromSeconds(1));
-                    MatchCollection matches = regEx.Matches(html);
-
-                    if (matches.Count > 0)
+                    try
                     {
-                        foreach (Match match in matches)
+                        res = (HttpWebResponse)req.GetResponse();
+                        using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
                         {
-                            if (match.Success)
-                            {
-                                Debug.WriteLine(match.Groups["filename"].Value);
-                            }
+                            completeFile = reader.ReadToEnd();
                         }
                     }
-                }
-                exists = res.StatusCode == HttpStatusCode.OK;
-            }
-            catch (WebException ex)
-            {
-                string log = string.Format("La ruta {0} no existe: {1}. {2}", url, ex.Message, ex.InnerException);
-                Debug.WriteLine(log);
-            }
-            finally
-            {
-                if (res != null)
-                {
-                    res.Close();
-                }
-            }
+                    catch (WebException)
+                    {
+                        mensaje = "No se pudo leer el archivo de Test";
+                        canRead = false;
+                    }
+                    finally
+                    {
+                        if (res != null)
+                        {
+                            res.Close();
+                        }
+                    }
+                    break;
+                case 1:
+                    try
+                    {
+                        completeFile = File.ReadAllText(urlFile, Encoding.UTF8);                        
+                    }
+                    catch
+                    {
+                        mensaje = "No se pudo leer el archivo de Test";
+                        canRead = false;
+                    }
+                    break;
+            }            
 
-            return exists;
+            return canRead;
         }
     }
 }

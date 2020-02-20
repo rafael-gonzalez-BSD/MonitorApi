@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -34,7 +35,7 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("testRutaArchivos")]
-        public RespuestaModel TestearRutaArchivos(string RutaLog)
+        public RespuestaModel TestearRutaArchivos(string RutaLog, string ArchivoTest)
         {
             string mensaje = "";
             RespuestaModel res = new RespuestaModel();
@@ -48,26 +49,26 @@ namespace MonitorProcesos.API.Controllers
             try
             {
                 bool existe = false;
+                List<string> files;
+                string[] filenameArray;
                 if (RutaLog.Length > 8 && (RutaLog.Substring(0, 7) == "http://" || RutaLog.Substring(0, 8) == "https://"))
-                {
-                    List<string> files = Utils.FileSystemScanner.UrlDirectoryExist(RutaLog, out mensaje);
+                {                    
+                    files = Utils.FileSystemScanner.UrlDirectoryExist(RutaLog, out mensaje);
                     if (files.Count > 0)
                     {
                         foreach (string filename in files.Where(x => x.Contains(".txt")))
                         {
-                            string[] filenameArray = filename.Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
-                            if (filenameArray[filenameArray.Length - 1].Contains("LogExec.txt") || filenameArray[filenameArray.Length - 1].Contains("LogEjec.txt"))
+                            filenameArray = filename.Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
+                            if (filenameArray[filenameArray.Length - 1].Contains(ArchivoTest))
                             {
                                 string urlFile = Path.Combine(RutaLog, filenameArray[filenameArray.Length - 1]);
-                                bool canRead = Utils.FileSystemScanner.GetLogFile(urlFile, out string mensajeArchivo);
-                                existe = canRead;
-                                mensaje = mensajeArchivo;
+                                existe = Utils.FileSystemScanner.GetLogFile(urlFile, 2,out mensaje);                                
                                 break;
                             }
                             else
                             {
                                 existe = false;
-                                mensaje = "No se pudo leer el archivo con los permisos.";
+                                mensaje = "No se encontro el archivo de Test";
                             }
                         }
                     }
@@ -75,7 +76,25 @@ namespace MonitorProcesos.API.Controllers
 
                 if (Regex.IsMatch(RutaLog, pattern, RegexOptions.IgnoreCase))
                 {
-                    existe = Utils.FileSystemScanner.PathDirectoryExist(RutaLog);
+                    files = Utils.FileSystemScanner.PathDirectoryExist(RutaLog, out mensaje);
+
+                    if (files.Count > 0)
+                    {
+                        foreach (string filename in files.Where(x =>x.Contains(".txt")))
+                        {
+                            filenameArray = filename.Split(new string[] { @"\" }, StringSplitOptions.RemoveEmptyEntries);
+                            if (filenameArray[filenameArray.Length - 1].Contains(ArchivoTest))
+                            {                                
+                                existe = Utils.FileSystemScanner.GetLogFile(filename, 1, out mensaje);
+                                break;
+                            }
+                            else
+                            {
+                                existe = false;
+                                mensaje = "No se encontro el archivo de Test";
+                            }
+                        }
+                    }
                 }
 
                 res.Datos = null;
