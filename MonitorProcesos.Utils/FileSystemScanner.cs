@@ -75,7 +75,7 @@ namespace MonitorProcesos.Utils
             {
                 if (Directory.Exists(@path))
                 {
-                    files = Directory.GetFiles(path).ToList();
+                    files = Directory.GetFiles(path).Where(x=>x.Contains(".txt")).ToList();
                     if (files.Count == 0)
                     {
                         mensaje = "No se encontro el archivo de Test";
