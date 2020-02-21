@@ -100,7 +100,7 @@ namespace MonitorProcesos.API.Controllers
                 res.Datos = null;
                 res.ErrorId = existe ? 0 : 404;
                 res.Id = 0;
-                res.Mensaje = existe ? "La ruta si existe" : mensaje.Length > 0 ? mensaje : "La ruta es invalida";
+                res.Mensaje = existe ? "Ruta Log Exitosa" : mensaje.Length > 0 ? mensaje : "La ruta es invalida";
                 res.Satisfactorio = existe;
             }
             catch (Exception ex)
