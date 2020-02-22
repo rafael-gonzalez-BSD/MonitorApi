@@ -41,6 +41,7 @@ namespace MonitorProcesos.API.Controllers
                 {"SistemaId", SistemaId },
                 {"ProcesoId", ProcesoId  },
             };
+
             return await n.ObtenerEjecuciones(param);
         }
 
