@@ -45,13 +45,14 @@ namespace MonitorProcesos.API.Controllers
         }
 
         [HttpGet("grafico")]
-        public async Task<RespuestaModel> ObtenerGraficoExcepciones(DateTime? FechaDesde, bool? Baja, int Opcion = 5, int SistemaId = 0)
+        public async Task<RespuestaModel> ObtenerGraficoExcepciones(DateTime FechaDesde, DateTime FechaHasta, bool? Baja, int Opcion = 5, int SistemaId = 0)
         {
             FechaDesde = FechaDesde == null ? DateTime.Today : FechaDesde;
             Dictionary<string, dynamic> param = new Dictionary<string, dynamic>()
             {
-                {"Opcion", Opcion },
+               {"Opcion", Opcion },
                 {"FechaDesde", FechaDesde },
+                {"FechaHasta", FechaHasta },
                 {"Baja", Baja },
                 {"sistemaId", SistemaId }
             };
