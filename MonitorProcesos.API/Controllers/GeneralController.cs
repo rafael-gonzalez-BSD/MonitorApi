@@ -68,7 +68,7 @@ namespace MonitorProcesos.API.Controllers
                             else
                             {
                                 existe = false;
-                                mensaje = "No se encontro el archivo de Test";
+                                mensaje = "No se encontró el archivo de Test";
                             }
                         }
                     }
@@ -91,7 +91,7 @@ namespace MonitorProcesos.API.Controllers
                             else
                             {
                                 existe = false;
-                                mensaje = "No se encontro el archivo de Test";
+                                mensaje = "No se encontró el archivo de Test";
                             }
                         }
                     }
