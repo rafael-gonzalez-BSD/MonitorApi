@@ -30,7 +30,7 @@ namespace MonitorProcesos.API.Controllers
             {
                 Clave = 1,
                 Valor = "Éxito",
-                Descripcion = ""
+                Descripcion = "Se realizó el ping a la API exitosamente"
             };
         }
 
