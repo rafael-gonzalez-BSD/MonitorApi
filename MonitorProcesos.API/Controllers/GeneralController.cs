@@ -34,6 +34,28 @@ namespace MonitorProcesos.API.Controllers
             };
         }
 
+        [HttpGet("testRutaApi2")]
+        public RespuestaPeticionModel TestearRutaApi2()
+        {
+            return new RespuestaPeticionModel
+            {
+                Clave = 2,
+                Valor = "Error",
+                Descripcion = "Error al realizar la peticion al API"
+            };
+        }
+
+        [HttpGet("testRutaApi3")]
+        public RespuestaPeticionModel TestearRutaApi3()
+        {
+            return new RespuestaPeticionModel
+            {
+                Clave = 3,
+                Valor = "Alerta",
+                Descripcion = "Mesaje de prueba de Alerta "
+            };
+        }
+
         [HttpGet("testRutaArchivos")]
         public RespuestaModel TestearRutaArchivos(string RutaLog, string ArchivoTest)
         {
