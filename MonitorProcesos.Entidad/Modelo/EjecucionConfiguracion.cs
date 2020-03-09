@@ -27,7 +27,7 @@ namespace MonitorProcesos.Entidad.Modelo
         public TimeSpan HoraDesdeVentana { get; set; }
         public DateTime FechaHastaVentana { get; set; }
         public TimeSpan HoraHastaVentana { get; set; }
-        public bool BajaVentana { get; set; }
+        public bool? BajaVentana { get; set; }
         public int Opcion { get; set; }
     }
 }
