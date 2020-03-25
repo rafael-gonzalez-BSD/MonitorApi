@@ -21,7 +21,7 @@ namespace MonitorProcesos.Datos.Implementacion
 
         public async Task<IEnumerable<T>> Consultar<T>(Dictionary<string, dynamic> P)
         {
-            return await _db.QueryAsync<T>(P, "[Bitacora].[spEjecucion_Consultar]");
+            return await _db.QueryAsync<T>(P, "[Bitacora].[spEjecucion_Consultar_II]");
         }
     }
 }
