@@ -689,11 +689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
+      "projectUniqueName": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
       "projectName": "MonitorProcesos.Entidad",
-      "projectPath": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
+      "projectPath": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj",
       "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Entidad\\obj\\",
+      "outputPath": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Entidad\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

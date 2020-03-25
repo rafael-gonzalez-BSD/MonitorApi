@@ -817,11 +817,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
+      "projectUniqueName": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
       "projectName": "MonitorProcesos.Negocio",
-      "projectPath": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
+      "projectPath": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Negocio\\MonitorProcesos.Negocio.csproj",
       "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Negocio\\obj\\",
+      "outputPath": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -840,11 +840,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj": {
-              "projectPath": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj"
+            "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj": {
+              "projectPath": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Datos\\MonitorProcesos.Datos.csproj"
             },
-            "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj": {
-              "projectPath": "C:\\MonitorApi202001201040\\rafael-gonzalez-BSD\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj"
+            "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj": {
+              "projectPath": "C:\\MonitorProcesos\\MonitorApi\\MonitorProcesos.Entidad\\MonitorProcesos.Entidad.csproj"
             }
           }
         }
