@@ -10,3 +10,4 @@ bin
 /MonitorProcesos.Entidad/obj
 /MonitorProcesos.Datos/obj/MonitorProcesos.Datos.csproj.nuget.dgspec.json
 /MonitorProcesos.API/obj
+.vs/MonitorProcesos/v15/.suo
